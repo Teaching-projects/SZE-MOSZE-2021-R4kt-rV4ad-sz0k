@@ -1,1 +1,1 @@
-computers/predator.json
+computers/Predator.json
