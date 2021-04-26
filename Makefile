@@ -8,7 +8,7 @@ build: $(OBJS)
 	$(COMPILER) $(CFLAGS) -o a.out $(OBJS)
 
 static_code_analysis:
-	cppcheck $(CPPS) --output-file=cppcheck_output.txt && chmod +x tests/warningcheck.sh && ../tests/warningcheck.sh 
+	cppcheck $(CPPS) --output-file=cppcheck_output.txt 
 
 leakcheck:
 	valgrind $(VFLAGS) $(VPARAMETER) ./tests/forrun.sh
