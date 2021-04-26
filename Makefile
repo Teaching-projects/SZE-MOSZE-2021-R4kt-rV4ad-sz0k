@@ -5,7 +5,7 @@ COMPILER := g++-9
 CPPS := JSON.cpp Computer.cpp Console.cpp Phone.cpp Product.cpp typeSelection.cpp Warehouse.cpp main.cpp 
 
 build: $(OBJS)
-	$(COMPILER) $(CFLAGS) -o a.out $(OBJS) ./test_input.txt t 
+	$(COMPILER) $(CFLAGS) -o a.out $(OBJS)
 
 static_code_analysis:
 	cppcheck $(CPPS) --output-file=cppcheck_output.txt && chmod +x tests/warningcheck.sh && ./tests/warningcheck.sh && chmod +x tests/errorcheck.sh && ./tests/errorcheck.sh
