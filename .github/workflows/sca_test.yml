@@ -6,7 +6,6 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-20.04
-    container: vasbeton/test_image:latest
     steps:
       - uses: actions/checkout@v2
       - name: Running code analysis with cppcheck
@@ -20,5 +19,3 @@ jobs:
         run: make build
       - name: Valgrind check
         run: make leakcheck
-      - name: In-out tests
-        run: make io-diff-tests
