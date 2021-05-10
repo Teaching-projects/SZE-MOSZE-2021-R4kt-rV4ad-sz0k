@@ -2,14 +2,12 @@ name: pushdocs.yml
 
 on:
     push:
-        branches:
-            - main
-            - gh-pages
 
 jobs:
     deploy:
         name: Deploy to GitHub Pages
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
+        container: doncsenko13/doxy_image:latest
         steps:
             - uses: actions/checkout@main
 
