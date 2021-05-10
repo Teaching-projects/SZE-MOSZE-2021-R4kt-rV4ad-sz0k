@@ -6,9 +6,8 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-20.04
+    container: doncsenko13/test_image:latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install cppcheck
-        run: sudo apt-get install cppcheck
       - name: run
         run: cppcheck *.cpp
