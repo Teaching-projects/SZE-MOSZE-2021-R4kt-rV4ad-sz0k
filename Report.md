@@ -50,7 +50,7 @@
 
 
 
-# Mindenféle számok (???)
+# Mindenféle számok
 
  - Összes cpp kódsor : 1150
  - Egyéb kódsor (make,doxyfile,shellscript, ...) : 320
